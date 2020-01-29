@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .center {
@@ -18,4 +19,15 @@ p {
 
 p:hover {
     border-bottom: 2px solid #DBB43C;
+    cursor: pointer;
+}
+
+i {
+    color: rgb(219,180,60);
+    font-size: 3rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }

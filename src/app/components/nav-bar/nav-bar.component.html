@@ -6,6 +6,11 @@
         <p routerLink="/boutique">BOUTIQUE</p>
         <p routerLink="/contact">CONTACT</p>
         <p routerLink="/tournee">RESERVEZ VOS PLACES</p>
+        <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user"></i></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/signin">Se connecter</button>
+            <button mat-menu-item routerLink="/signup">S'inscrire</button>
+        </mat-menu>
     </div>
 
 </div>

@@ -1,3 +1,6 @@
+import { AdminComponent } from './pages/admin/admin.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
+import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 import { LaTourneeComponent } from './pages/la-tournee/la-tournee.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CirquePageComponent } from './pages/cirque-page/cirque-page.component';
@@ -5,6 +8,9 @@ import { BoutiqueComponent } from './pages/boutique/boutique.component';
 import { AcceuilComponent } from './pages/acceuil/acceuil.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { AuthGuard } from './core/auth.guard';
+import { AdminGuard } from './core/admin.guard';
 
 
 const routes: Routes = [
@@ -12,7 +18,11 @@ const routes: Routes = [
   {path: 'boutique', component: BoutiqueComponent},
   {path: 'cirque', component: CirquePageComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'tournee', component: LaTourneeComponent}
+  {path: 'tournee', component: LaTourneeComponent},
+  {path: 'signin', component: SignInPageComponent},
+  {path: 'signup', component: SignUpPageComponent},
+  {path: 'reservation', component: ReservationComponent, canActivate: [AuthGuard]},
+  {path: 'admin', component: AdminComponent, canActivate: [AdminGuard]},
 ];
 
 @NgModule({

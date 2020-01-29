@@ -11,6 +11,16 @@ import { AcceuilComponent } from './pages/acceuil/acceuil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
+import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
+import { RepresentationComponent } from './components/representation/representation.component';
+import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,13 +31,21 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactComponent,
     AcceuilComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    SignInPageComponent,
+    SignUpPageComponent,
+    RepresentationComponent,
+    ReservationPageComponent,
+    AdminComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

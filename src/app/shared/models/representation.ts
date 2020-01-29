@@ -3,6 +3,7 @@ export class Representation {
     date: Date;
     hour: string;
     place: string;
+    city: string;
     capacity: number;
     price: string;
     forMember: boolean;

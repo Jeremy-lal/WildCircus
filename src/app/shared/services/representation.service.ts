@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RepresentationService {
 
-  static URL = 'http://localhost:3000/representation/';
+  static URL = 'http://localhost:3000/representations/';
   static URL_AUTH = '';
 
 

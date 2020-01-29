@@ -1,1 +1,12 @@
-<p>la-tournee works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="center">
+    <div class="container">
+        <h2><i class="far fa-clock"></i> Les dates et lieux de la tournée  </h2>
+        <app-representation [representation]="representation" *ngFor="let representation of representations">
+        </app-representation>
+    </div>
+
+    
+</div>
+<app-footer></app-footer>
