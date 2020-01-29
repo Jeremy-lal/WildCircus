@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="city">
+        <p>{{representation.city}}</p>
+    </div>
+    <div class="date">
+        <p>{{representation.date | date:'dd/mm/yy'}}</p>
+        <p>{{representation.hour}}</p>
+    </div>
+    <div class="remplissage">
+        <p> {{representation.nbreserved}}/{{representation.capacity}}</p>
+    </div>
+    <div class="menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu" class="menu">
+          <i class="material-icons">
+            more_horiz
+            </i>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="updateRepresentation(representation)">
+              <mat-icon>create</mat-icon>
+              <span>Modifier</span>
+            </button>
+            <button mat-menu-item (click)="deleteRepresentation(representation.id)">
+              <mat-icon>delete</mat-icon>
+              <span>Supprimer</span>
+            </button>
+          </mat-menu>
+    </div>
+
+</div>

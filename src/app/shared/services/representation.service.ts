@@ -11,9 +11,10 @@ export class RepresentationService {
   static URL = 'http://localhost:3000/representations/';
   static URL_AUTH = '';
 
+  toUpdate = false;
+
 
   constructor(private http: HttpClient) { }
-
 
 
   getAll(): Observable<Representation[]> {
@@ -28,7 +29,7 @@ export class RepresentationService {
     return this.http.get<Representation[]>(RepresentationService.URL + 'forMember');
   }
 
-  createUser(newRepresentation) {
+  createRepresentation(newRepresentation) {
     return this.http.post(RepresentationService.URL, newRepresentation);
   }
 

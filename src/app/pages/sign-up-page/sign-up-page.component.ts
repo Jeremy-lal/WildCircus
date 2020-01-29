@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UserService } from './../../shared/services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -19,7 +20,7 @@ export class SignUpPageComponent implements OnInit {
 
   indexPicture: number;
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
 
     this.signUpForm = this.fb.group({
       firstname: [''], lastname: [''], email: [''], pwd: ['']
@@ -35,6 +36,7 @@ export class SignUpPageComponent implements OnInit {
     const userToPost = this.signUpForm.value;
     this.userService.createUser(userToPost).subscribe((eventPosted) => {
       console.log(eventPosted);
+      this.router.navigateByUrl('/');
     });
   }
 

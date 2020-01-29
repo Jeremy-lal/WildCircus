@@ -1,4 +1,8 @@
+import { RepresentationService } from './../../shared/services/representation.service';
+import { Representation } from './../../shared/models/representation';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { RepresentationFormComponent } from 'src/app/components/representation-form/representation-form.component';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  representations: Representation[];
+
+  constructor(private representationService: RepresentationService, public dialog: MatDialog) { }
 
   ngOnInit() {
+    this.representationService.getAll().subscribe((representation) => {
+      this.representations = representation;
+    });
+
+  }
+
+  createRepresentation() {
+    this.representationService.toUpdate = false;
+    const dialogRef = this.dialog.open(RepresentationFormComponent, {
+      width: '550px',
+    });
   }
 
 }

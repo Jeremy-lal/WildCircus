@@ -7,10 +7,14 @@
         <p routerLink="/contact">CONTACT</p>
         <p routerLink="/tournee">RESERVEZ VOS PLACES</p>
         <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user"></i></button>
+
         <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/signin">Se connecter</button>
-            <button mat-menu-item routerLink="/signup">S'inscrire</button>
+            <button mat-menu-item routerLink="/signin" *ngIf="currentUser === undefined">Se connecter</button>
+            <button mat-menu-item routerLink="/signup" *ngIf="currentUser === undefined">S'inscrire</button>
+            <button mat-menu-item routerLink="/profil" *ngIf="currentUser !== undefined">Mes réservations</button>
+            <button mat-menu-item routerLink="/admin" *ngIf="currentUser?.status === true ">Admin</button>
         </mat-menu>
+
     </div>
 
 </div>

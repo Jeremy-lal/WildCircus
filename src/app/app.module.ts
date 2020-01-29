@@ -14,11 +14,18 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { RepresentationComponent } from './components/representation/representation.component';
 import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
+import { UserReservationPageComponent } from './pages/user-reservation-page/user-reservation-page.component';
+import { RepreAdminComponent } from './components/repre-admin/repre-admin.component';
+import { RepresentationFormComponent } from './components/representation-form/representation-form.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -37,7 +44,10 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
     RepresentationComponent,
     ReservationPageComponent,
     AdminComponent,
-    ReservationComponent
+    ReservationComponent,
+    UserReservationPageComponent,
+    RepreAdminComponent,
+    RepresentationFormComponent
   ],
   imports: [
     BrowserModule,
@@ -45,9 +55,15 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule,
+    MatDialogModule,
+    MatSelectModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{ provide: MatDialogRef, useValue: {} }],
+  bootstrap: [AppComponent],
+  entryComponents: [RepresentationFormComponent]
+
 })
+
 export class AppModule { }

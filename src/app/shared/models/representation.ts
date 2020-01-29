@@ -2,9 +2,10 @@ export class Representation {
     id: number;
     date: Date;
     hour: string;
-    place: string;
+    adress: string;
     city: string;
     capacity: number;
+    nbreserved: number;
     price: string;
     forMember: boolean;
 }

@@ -1,0 +1,61 @@
+<form [formGroup]="representationForm" (ngSubmit)="sendRepresentation()">
+
+  <div class="reg-form">
+
+
+    <div class="section-username">
+      <div class="login-form">
+        <input type="date" name="date" formControlName="date" required>
+      </div>
+    </div>
+
+    <div class="section-username">
+      <div class="login-form">
+        <input type="text" name="email" formControlName="hour" required>
+        <label class="label-name"><span class="content-name">Heure</span></label>
+      </div>
+    </div>
+
+    <div class="section-username">
+      <div class="login-form">
+        <input type="text" name="adress" formControlName="adress" required>
+        <label class="label-name"><span class="content-name">Adresse</span></label>
+      </div>
+    </div>
+
+    <div class="section-confirm-password">
+      <div class="login-form">
+        <input type="text" name="city" formControlName="city" required>
+        <label class="label-name"><span class="content-name">Ville</span></label>
+      </div>
+    </div>
+
+    <div class="section-confirm-password">
+      <div class="login-form">
+        <input type="number" name="capacity" formControlName="capacity" required>
+        <label class="label-name"><span class="content-name">Capacité</span></label>
+      </div>
+    </div>
+
+    <div class="section-confirm-password">
+      <div class="login-form">
+        <input type="text" name="price" formControlName="price" required>
+        <label class="label-name"><span class="content-name">Prix</span></label>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-select placeholder="Groupe" formControlName="forMember">
+        <mat-option value=1>Premium</mat-option>
+        <mat-option value=0>Basic</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="login-form">
+      <button type="button" class="form-btn" (click)='sendRepresentation()'
+        *ngIf="representationService.toUpdate === false">Créer</button>
+      <button type="button" class="form-btn" (click)='updateRepresentation()'
+        *ngIf="representationService.toUpdate === true">Modifier</button>
+    </div>
+  </div>
+</form>

@@ -1,1 +1,17 @@
-<p>admin works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="addRepresentation" (click)="createRepresentation()">
+    représentation <i class="material-icons">
+        add_circle
+    </i>
+</div>
+
+<div class="center">
+    <div class="container">
+        <app-repre-admin [representation]="representation" *ngFor="let representation of representations">
+        </app-repre-admin>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

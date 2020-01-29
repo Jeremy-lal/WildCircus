@@ -10,10 +10,18 @@ import { tap, map } from 'rxjs/operators';
 })
 export class UserService {
 
-  static URL_AUTH = '';
+  static URL_AUTH = 'http://localhost:3000/auth/';
   static URL = 'http://localhost:3000/users/';
 
-  currentUser: User;
+  currentUser: User = {
+    id: 1,
+    firstname : 'jeremy',
+    lastname: 'lalait',
+    email: 'jlalait33700@gmail.com',
+    password: '1234',
+    status: true,
+    representation: []
+  };
 
 
   constructor(private http: HttpClient) { }
