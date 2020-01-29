@@ -1,6 +1,7 @@
 .container {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
 app-nav-bar, app-footer {
