@@ -1,0 +1,40 @@
+.container {
+    background-color: rgb(6,13,45);
+}
+
+.suivez {
+    border-bottom: 1px solid white;
+    display: flex;
+    color: white;
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+.suivez div {
+    width: 50%;
+}
+p {
+    padding-left: 2rem;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+.logo i{
+    color: rgba(219,180,60, 0.6);
+    font-size: 4rem;
+    padding-right: 1rem;
+}
+
+.logo i:hover {
+    color:rgb(219,180,60)
+}
+
+.cgu {
+    padding-bottom: 2rem;
+}
