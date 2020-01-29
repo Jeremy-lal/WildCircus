@@ -10,8 +10,7 @@ export class AdminGuard implements CanActivate {
 
   constructor(private userService: UserService, private router: Router) {}
 
-
-  canActivate(
+    canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
