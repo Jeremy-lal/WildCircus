@@ -9,7 +9,6 @@
     color: white;
     font-size: 2rem;
     padding-top: 1rem;
-    margin-top: 2rem;
 }
 
 .suivez div {
@@ -40,7 +39,11 @@ p {
     padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+    .container {
+        margin-top: 2rem;
+    }
+    
     .suivez {
         flex-direction: column;
         text-align: center;
