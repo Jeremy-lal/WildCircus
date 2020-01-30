@@ -41,6 +41,13 @@ h1 {
     justify-content: space-around;
 }
 
+.left, .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+
 h2 {
     color: rgb(219,180,60);
     text-align: center;
@@ -56,4 +63,19 @@ p {
 
 i {
     color: rgb(219,180,60); 
+}
+
+@media screen and (max-width:800px) {
+    .bottom {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
 }
