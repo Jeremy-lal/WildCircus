@@ -13,6 +13,7 @@
             <button mat-menu-item routerLink="/signup" *ngIf="currentUser === undefined">S'inscrire</button>
             <button mat-menu-item routerLink="/profil" *ngIf="currentUser !== undefined">Mes réservations</button>
             <button mat-menu-item routerLink="/admin" *ngIf="currentUser?.status === true ">Admin</button>
+            <button mat-menu-item (click)="logOut()" *ngIf="currentUser !== undefined">Déconnexion</button>
         </mat-menu>
 
     </div>

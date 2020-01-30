@@ -15,15 +15,15 @@ export class LaTourneeComponent implements OnInit {
   constructor(private representationService: RepresentationService, private userservice: UserService) { }
 
   ngOnInit() {
-    // if (this.userservice.currentUser !== undefined) {
-      // this.representationService.getAll().subscribe((representations) => {
-      //   this.representations = representations;
-      // });
-    // } else {
+    if (this.userservice.currentUser !== undefined) {
+      this.representationService.getAll().subscribe((representations) => {
+        this.representations = representations;
+      });
+    } else {
       this.representationService.getRepresentationForVisitor().subscribe((representations) => {
         this.representations = representations;
       });
-    // }
+    }
 
   }
 

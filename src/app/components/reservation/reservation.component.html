@@ -1,0 +1,25 @@
+<div class="container">
+
+<h2>Récapitulatif</h2>
+
+<div class="recap">
+    <div class="letf">
+        <p>Ville : {{representation.city}}</p>
+        <p>Adresse : {{representation.adress}}</p>
+        <p>Date : {{representation.date | date:'dd/mm/yy'}}</p>
+        <p>Heure : {{representation.hour}}</p>
+    </div>
+    <div class="right">
+        <p>Prix : {{representation.price}} euros</p>
+        <p>Places réservés : {{representation.nbreserved}}/{{representation.capacity}}</p>
+    </div>
+</div>
+
+<div class="center">
+    <button (click)="reserver()">Réservez</button>
+</div>
+
+
+
+
+</div>

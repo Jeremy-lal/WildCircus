@@ -13,15 +13,17 @@ export class UserService {
   static URL_AUTH = 'http://localhost:3000/auth/';
   static URL = 'http://localhost:3000/users/';
 
-  currentUser: User = {
-    id: 1,
-    firstname : 'jeremy',
-    lastname: 'lalait',
-    email: 'jlalait33700@gmail.com',
-    password: '1234',
-    status: true,
-    representation: []
-  };
+  // currentUser: User = {
+  //   id: 1,
+  //   firstname : 'jeremy',
+  //   lastname: 'lalait',
+  //   email: 'jlalait33700@gmail.com',
+  //   password: '1234',
+  //   status: true,
+  //   representation: []
+  // };
+
+  currentUser: User;
 
 
   constructor(private http: HttpClient) { }
@@ -44,14 +46,15 @@ export class UserService {
 
 
   public connexion(user: User) {
-    return this.http.post(UserService.URL_AUTH + 'signin', user, { observe: 'response' }).pipe(
-      tap((response: HttpResponse<any>) => {
-        const token = response.headers.get('JWT-TOKEN');
-        localStorage.setItem('JWT-TOKEN', token);
-        this.currentUser = response.body;
-        console.log(this.currentUser);
-        return response.body;
-      }));
+    // return this.http.post(UserService.URL_AUTH + 'signin', user, { observe: 'response' }).pipe(
+    //   tap((response: HttpResponse<any>) => {
+    //     const token = response.headers.get('JWT-TOKEN');
+    //     localStorage.setItem('JWT-TOKEN', token);
+    //     this.currentUser = response.body;
+    //     console.log(this.currentUser);
+    //     return response.body;
+    //   }));
+    return this.http.get<User>(UserService.URL + 1);
   }
 
   getAllUsers(): Observable<User[]> {
@@ -62,9 +65,12 @@ export class UserService {
     return this.http.post(UserService.URL_AUTH + 'signup', newUser);
   }
 
-  updateUser(userToUpdate) {
-    const id = userToUpdate.id;
-    return this.http.put(UserService.URL + id, userToUpdate);
+  updateUserRepresentation(userId: number, representationId: number) {
+    const objToSend = {
+      userId,
+      representationId
+    };
+    return this.http.post(UserService.URL + 'representation', objToSend);
   }
 
   deleteUser(id) {

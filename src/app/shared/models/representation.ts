@@ -8,4 +8,5 @@ export class Representation {
     nbreserved: number;
     price: string;
     forMember: boolean;
+    show = false;
 }

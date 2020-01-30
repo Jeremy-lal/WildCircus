@@ -32,7 +32,8 @@ export class SignInPageComponent implements OnInit {
   }
 
   login() {
-    this.userService.connexion(this.signInForm.value).subscribe(() => {
+    this.userService.connexion(this.signInForm.value).subscribe((user) => {
+      this.userService.currentUser = user;
       if (this.userService.currentUser !== undefined) {
         console.log(this.userService.currentUser);
         this.router.navigateByUrl('/');

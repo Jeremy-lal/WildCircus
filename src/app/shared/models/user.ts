@@ -9,7 +9,7 @@ export class User {
   email: string;
 
   status: boolean;
-  representation: Representation[];
+  representations: Representation[];
 
 }
 

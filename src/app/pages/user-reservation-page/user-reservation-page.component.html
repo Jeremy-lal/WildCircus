@@ -1,1 +1,29 @@
-<p>user-reservation-page works!</p>
+<app-nav-bar></app-nav-bar>
+
+
+<h1> Mes réservations </h1>
+
+
+<div class="reservations" *ngIf="currentUser.representations.length === 0">
+    <p>Pas de réservations pour le moment</p>
+</div>
+
+<div class="reservations" *ngIf="currentUser.representations.length !== 0">
+
+    <div class="representation" *ngFor="let representation of currentUser.representations">
+        <div class="city">
+            <p>{{representation.city}}</p>
+            <p>{{representation.adress}}</p>
+        </div>
+        <div class="date">
+            <p>{{representation.date | date:'dd/mm/yy'}}</p>
+            <p>{{representation.hour}}</p>
+        </div>
+        <div class="btn">
+
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

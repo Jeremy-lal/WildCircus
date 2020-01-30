@@ -1,6 +1,5 @@
 import { UserReservationPageComponent } from './pages/user-reservation-page/user-reservation-page.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { ReservationComponent } from './pages/reservation/reservation.component';
 import { SignInPageComponent } from './pages/sign-in-page/sign-in-page.component';
 import { LaTourneeComponent } from './pages/la-tournee/la-tournee.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   {path: 'tournee', component: LaTourneeComponent},
   {path: 'signin', component: SignInPageComponent},
   {path: 'signup', component: SignUpPageComponent},
-  {path: 'reservation', component: ReservationComponent, canActivate: [AuthGuard]},
   {path: 'profil', component: UserReservationPageComponent, canActivate: [AuthGuard]},
   {path: 'admin', component: AdminComponent, canActivate: [AdminGuard]},
 ];

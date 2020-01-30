@@ -1,3 +1,4 @@
+import { ReservationComponent } from './components/reservation/reservation.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,9 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { RepresentationComponent } from './components/representation/representation.component';
-import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
 import { AdminComponent } from './pages/admin/admin.component';
-import { ReservationComponent } from './pages/reservation/reservation.component';
 import { UserReservationPageComponent } from './pages/user-reservation-page/user-reservation-page.component';
 import { RepreAdminComponent } from './components/repre-admin/repre-admin.component';
 import { RepresentationFormComponent } from './components/representation-form/representation-form.component';
@@ -42,12 +41,11 @@ import {MatSelectModule} from '@angular/material/select';
     SignInPageComponent,
     SignUpPageComponent,
     RepresentationComponent,
-    ReservationPageComponent,
     AdminComponent,
-    ReservationComponent,
     UserReservationPageComponent,
     RepreAdminComponent,
-    RepresentationFormComponent
+    RepresentationFormComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +60,7 @@ import {MatSelectModule} from '@angular/material/select';
   ],
   providers: [{ provide: MatDialogRef, useValue: {} }],
   bootstrap: [AppComponent],
-  entryComponents: [RepresentationFormComponent]
+  entryComponents: [RepresentationFormComponent, ReservationComponent]
 
 })
 
