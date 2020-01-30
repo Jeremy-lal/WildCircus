@@ -2,9 +2,12 @@
 
     <div class="city">
         <p>{{representation.city}}</p>
+        <div class="imgPre" *ngIf="representation.forMember === true">
+            <img src="https://inadvance-box.com/wp-content/uploads/2018/04/Premium-Icon-600x600-300x300.png" alt="premium">
+          </div>
     </div>
     <div class="date">
-        <p>{{representation.date | date:'dd/mm/yy'}}</p>
+        <p class="bold"> Date : {{representation.date | date:'dd/MM/yy'}}</p>
         <p>{{representation.hour}}</p>
     </div>
     <div class="btn">

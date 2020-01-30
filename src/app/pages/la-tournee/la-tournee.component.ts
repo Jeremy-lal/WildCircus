@@ -12,10 +12,11 @@ export class LaTourneeComponent implements OnInit {
 
   representations: Representation[];
 
-  constructor(private representationService: RepresentationService, private userservice: UserService) { }
+  constructor(private representationService: RepresentationService, private userService: UserService) { }
 
   ngOnInit() {
-    if (this.userservice.currentUser !== undefined) {
+    this.userService.isLogged();
+    if (this.userService.currentUser !== undefined) {
       this.representationService.getAll().subscribe((representations) => {
         this.representations = representations;
       });

@@ -8,7 +8,6 @@ import { CirquePageComponent } from './pages/cirque-page/cirque-page.component';
 import { LaTourneeComponent } from './pages/la-tournee/la-tournee.component';
 import { BoutiqueComponent } from './pages/boutique/boutique.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { AcceuilComponent } from './pages/acceuil/acceuil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -35,7 +34,6 @@ import {MatSelectModule} from '@angular/material/select';
     LaTourneeComponent,
     BoutiqueComponent,
     ContactComponent,
-    AcceuilComponent,
     NavBarComponent,
     FooterComponent,
     SignInPageComponent,

@@ -23,7 +23,7 @@ export class SignUpPageComponent implements OnInit {
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
 
     this.signUpForm = this.fb.group({
-      firstname: [''], lastname: [''], email: [''], pwd: ['']
+      firstname: [''], lastname: [''], email: [''], password: ['']
     });
 
   }
@@ -35,7 +35,6 @@ export class SignUpPageComponent implements OnInit {
   sendUser(): void {
     const userToPost = this.signUpForm.value;
     this.userService.createUser(userToPost).subscribe((eventPosted) => {
-      console.log(eventPosted);
       this.router.navigateByUrl('/');
     });
   }

@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('https://www.cirque-gruss.com/assets/img/layout/cirque/single/fg_01.png');
+    background-size: 25%;
 }
 
 .container {
@@ -17,4 +19,20 @@ h2 {
 }
 i {
     color: rgb(219,180,60)
+}
+
+.premium {
+    margin-top: 10rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .center {
+        background-size: 70%;
+    }
+    h2 {
+        font-size : 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
 }

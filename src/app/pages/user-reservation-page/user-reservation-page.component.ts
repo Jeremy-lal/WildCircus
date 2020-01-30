@@ -14,7 +14,9 @@ export class UserReservationPageComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    // this.userService.isLogged();
     this.currentUser = this.userService.currentUser;
+    console.log(this.currentUser);
   }
 
 }

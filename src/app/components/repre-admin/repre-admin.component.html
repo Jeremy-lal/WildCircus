@@ -2,8 +2,9 @@
 
   <div class="city">
     <p>{{representation.city}}</p>
-    <!-- <img src="https://inadvance-box.com/wp-content/uploads/2018/04/Premium-Icon-600x600-300x300.png"
-    ngIf="representation.forMember === true" alt="premium"> -->
+    <div class="imgPre" *ngIf="representation.forMember === true">
+      <img src="https://inadvance-box.com/wp-content/uploads/2018/04/Premium-Icon-600x600-300x300.png" alt="premium">
+    </div>
   </div>
   <div class="date">
     <p>{{representation.date | date:'dd/mm/yy'}}</p>

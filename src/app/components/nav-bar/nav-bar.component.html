@@ -1,21 +1,53 @@
 <div class="container">
 
-    <div class="center">
-        <p routerLink="/cirque">LE CIRQUE</p>
-        <p routerLink="/tournee">LA TOURNEE</p>
-        <p routerLink="/boutique">BOUTIQUE</p>
-        <p routerLink="/contact">CONTACT</p>
-        <p routerLink="/tournee">RESERVEZ VOS PLACES</p>
-        <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user"></i></button>
 
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink="/signin" *ngIf="currentUser === undefined">Se connecter</button>
-            <button mat-menu-item routerLink="/signup" *ngIf="currentUser === undefined">S'inscrire</button>
-            <button mat-menu-item routerLink="/profil" *ngIf="currentUser !== undefined">Mes réservations</button>
-            <button mat-menu-item routerLink="/admin" *ngIf="currentUser?.status === true ">Admin</button>
-            <button mat-menu-item (click)="logOut()" *ngIf="currentUser !== undefined">Déconnexion</button>
-        </mat-menu>
+  <div class="sous1">
+    <p routerLink="/cirque">LE CIRQUE</p>
+    <p routerLink="/tournee">LA TOURNEE</p>
+    <p routerLink="/boutique">BOUTIQUE</p>
+    <p routerLink="/contact">CONTACT</p>
+    <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user"></i></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/signin" *ngIf="currentUser === undefined">Se connecter</button>
+      <button mat-menu-item routerLink="/signup" *ngIf="currentUser === undefined">S'inscrire</button>
+      <button mat-menu-item routerLink="/profil" *ngIf="currentUser !== undefined">Mes réservations</button>
+      <button mat-menu-item routerLink="/admin" *ngIf="currentUser?.status === true ">Admin</button>
+      <button mat-menu-item (click)="logOut()" *ngIf="currentUser !== undefined">Déconnexion</button>
+    </mat-menu>
+  </div>
 
-    </div>
+  <div class="sous2">
+
+    <button mat-icon-button [matMenuTriggerFor]="burger">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #burger="matMenu">
+      <button mat-menu-item routerLink="/cirque">
+        <span>LE CIRQUE</span>
+      </button>
+      <button mat-menu-item routerLink="/tournee">
+        <span>LA TOURNEE</span>
+      </button>
+      <button mat-menu-item routerLink="/boutique">
+        <span>BOUTIQUE</span>
+      </button>
+      <button mat-menu-item routerLink="/contact">
+        <span>CONTACT</span>
+      </button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user"></i></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/signin" *ngIf="currentUser === undefined">Se connecter</button>
+      <button mat-menu-item routerLink="/signup" *ngIf="currentUser === undefined">S'inscrire</button>
+      <button mat-menu-item routerLink="/profil" *ngIf="currentUser !== undefined">Mes réservations</button>
+      <button mat-menu-item routerLink="/admin" *ngIf="currentUser?.status === true ">Admin</button>
+      <button mat-menu-item (click)="logOut()" *ngIf="currentUser !== undefined">Déconnexion</button>
+    </mat-menu>
+
+  </div>
+
+
+
 
 </div>

@@ -27,16 +27,14 @@ export class SignInPageComponent implements OnInit {
 
     this.signInForm = this.fb.group({
       email: ['', [Validators.required]],
-      pwd: ['', [Validators.required]]
+      password: ['', [Validators.required]]
     });
   }
 
   login() {
-    this.userService.connexion(this.signInForm.value).subscribe((user) => {
-      this.userService.currentUser = user;
+    this.userService.connexion(this.signInForm.value).subscribe(() => {
       if (this.userService.currentUser !== undefined) {
-        console.log(this.userService.currentUser);
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/tournee');
       }
     });
   }

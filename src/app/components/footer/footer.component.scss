@@ -39,3 +39,22 @@ p {
 .cgu {
     padding-bottom: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+    .suivez {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 0.5rem;
+    }
+    .suivez div {
+        width: 100%;
+    }
+    .cgu {
+        text-align: center;
+    }
+
+}
