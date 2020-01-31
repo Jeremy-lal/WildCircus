@@ -17,7 +17,7 @@ export class AdminComponent implements OnInit {
   constructor(private representationService: RepresentationService, public dialog: MatDialog, private userService: UserService) { }
 
   ngOnInit() {
-    this.userService.isLogged();
+    this.userService.getMe().subscribe();
     this.representationService.getAll().subscribe((representation) => {
       this.representations = representation;
     });
