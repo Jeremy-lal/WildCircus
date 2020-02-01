@@ -10,8 +10,7 @@ h1, h2 {
 
 h1 {
     font-size: 5rem;
-    padding-top: 4rem;
-    margin-bottom: 10rem;
+    padding-top: 2rem;
 }
 
 h2 {
@@ -62,6 +61,15 @@ p label {
     font-size: 2rem;
 }
 
+.logo {
+    width: 40%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
     .container {
         background-size: 70%;
@@ -88,13 +96,14 @@ p label {
 
     h1 {
         padding-top: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
     }
 
     img {
         padding-bottom: 1rem;
     }
+
 
 }
 @media screen and (max-width: 991px) and (min-width: 769px) {

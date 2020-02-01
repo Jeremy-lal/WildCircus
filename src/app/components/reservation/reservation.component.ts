@@ -29,6 +29,7 @@ export class ReservationComponent implements OnInit {
       this.representation.nbreserved++;
       this.representationService.updateRepresentation(this.representation).subscribe();
 
+      this.userService.currentUser.representations.push(this.representation);
       this.userService.updateUserRepresentation(this.currentUser.id, this.representation.id).subscribe(() => {
       });
 
